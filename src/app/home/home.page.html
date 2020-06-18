@@ -1,20 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Blank
+      Chat Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" padding>
+  <ion-img src="/assets/welcome.jpg"></ion-img><br>
+  <h3 class="center">LOG IN HERE</h3>
+<ion-card>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="pwd" type="password"></ion-input>
+  </ion-item>
+  <br>
+  
+  <div class="center">
+    <ion-button (click)="login()">Log in</ion-button>
   </div>
+  <p>if you dont have a account,<a routerLink="/signup">Click Here</a></p>
+</ion-card>
+  
 </ion-content>
+

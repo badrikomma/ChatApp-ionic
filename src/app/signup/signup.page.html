@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chat Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img src="/assets/signup.jpg"></ion-img>
+  <ion-card class="center">
+  <ion-card-header>
+    <ion-card-title>ENTER YOUR DETAILS HERE</ion-card-title>
+  </ion-card-header>
+  <ion-item>
+    <ion-label position='floating'>Username</ion-label>
+    <ion-input type="text" [(ngModel)]='username'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position='floating'>Email</ion-label>
+    <ion-input type="email" [(ngModel)]='email'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position='floating'>Password</ion-label>
+    <ion-input type="password" [(ngModel)]='pwd'></ion-input>
+  </ion-item>
+  <br>
+  <div text-center>
+    <ion-button (click)="signup()">Sign Up</ion-button>
+  </div>
+
+  <br><br><br>
+  <div text-center>
+    <b>or</b>
+    <br>
+    <ion-button (click)='goto_login()' fill="clear">Login</ion-button>
+  </div>
+</ion-card>
+</ion-content>
